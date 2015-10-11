@@ -4,7 +4,7 @@ var app = angular.module('app', ['ionic']);
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state('/homepage', {
         url: '/homepage',
-        templateUrl: '/view/homepage.html',
+        templateUrl: '/view/index.html',
         controller: 'homepageCtrl'
     }).state('/lagou', {
         url: '/lagou',
