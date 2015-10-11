@@ -1,20 +1,23 @@
-<header>
-    My site about this
-</header>
-
-<div class="container">
-    <section id="main_content">
-        <h1>Wlecome to Maye Page </h1>
-
-    </section>
-
-</div>
 <div ng-controller="homepageCtrl as home">
-    <h1>{{home.greet}}</h1>
+    <header>
+        My site about this
+    </header>
+
+    <div class="container">
+        <section id="main_content">
+            <h1>Wlecome to Maye Page </h1>
+
+        </section>
+
+    </div>
+    <div>
+        <h1>{{home.greet}}</h1>
+        <h2 style="float:right" ng-click="home.golagou()">go to Lagou</h2>
+    </div>
+
+    <my-dragble>Drag Mes</my-dragble>
+
+
+    <h1 class="title">the Note Making App</h1>
+    <note-pad/>
 </div>
-
-<my-dragble>Drag Me</my-dragble>
-
-
-<h1 class="title">the Note Making App</h1>
-<note-pad/>

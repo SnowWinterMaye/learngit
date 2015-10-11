@@ -1,7 +1,15 @@
 
-app.controller('homepageCtrl', function () {
+app.controller('homepageCtrl', function ($state) {
     var vm = this;
     vm.greet = "Angular Test";
+    
+    vm.golagou = function(){
+        $state.go('/lagou');
+    }
+}).controller('lagouCtrl',function(){
+    var vs = this;
+    vs.greet = "lagou";
+    console.log('ZZZ');
 }).factory('notesFactory', function() {
     return {
         put: function(note) {

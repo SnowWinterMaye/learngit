@@ -6,6 +6,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         url: '/homepage',
         templateUrl: '/view/homepage.html',
         controller: 'homepageCtrl'
+    }).state('/lagou', {
+        url: '/lagou',
+        templateUrl: '/view/lagou.html',
+        controller: 'lagouCtrl'
     });
     $urlRouterProvider.otherwise('/homepage');
 }]).run([function () {
