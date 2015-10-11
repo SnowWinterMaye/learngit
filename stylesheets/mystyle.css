@@ -53,3 +53,7 @@ body{
 	background: #EE1A30;
 	display: none;
 }
+#canvas{
+	display: block;
+	margin: 50px auto;
+}

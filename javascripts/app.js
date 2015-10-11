@@ -10,6 +10,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         url: '/lagou',
         templateUrl: '/view/lagou.html',
         controller: 'lagouCtrl'
+    }).state('/clock', {
+        url: '/clock',
+        templateUrl: '/view/clock.html',
+        controller: 'clockCtrl'
     });
     $urlRouterProvider.otherwise('/homepage');
 }]).run([function () {
