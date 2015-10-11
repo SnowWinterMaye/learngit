@@ -23,8 +23,9 @@ app.controller('clockCtrl', function ($timeout, $scope) {
 	$scope.$watch('date', function (value) {
 		var h = $scope.date.getHours(), m = $scope.date.getMinutes(), s = $scope.date.getSeconds();
 		render(content, h, m, s);
+
+		//update();
 		updateTime();
-		update();
 		//
 	});
 
@@ -116,9 +117,9 @@ app.controller('clockCtrl', function ($timeout, $scope) {
 		//每隔1s重新获取一次
 		$timeout(function () {
 			$scope.date = new Date();
-			update();
+			//
 		}, 50);
-		
+		update();
 	}
 
 });
@@ -143,17 +144,16 @@ function render(ext, hours, minutes, second) {
 
 	renderDigit(MARGIN_LEFT + 78 * (RADIUS + 1), MARGIN_TOP, parseInt(second / 10), ext);
 	renderDigit(MARGIN_LEFT + 93 * (RADIUS + 1), MARGIN_TOP, parseInt(second % 10), ext);
-	
+
 	for (var i = 0; i < ball.length; i++) {
 		ext.fillStyle = ball[i].color;
-		
 		ext.beginPath();
-		ext.arc(ball[i].x,ball[i].y,RADIUS,0,2*Math.PI,true);
+		ext.arc(ball[i].x, ball[i].y, RADIUS, 0, 2 * Math.PI, true);
 		ext.closePath();
-		
 		ext.fill();
-		
+
 	}
+
 }
 
 function renderDigit(x, y, num, cxt) {
