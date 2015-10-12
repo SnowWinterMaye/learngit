@@ -114,7 +114,7 @@ app.controller('clockCtrl', function ($timeout, $scope) {
 
 
 	function updateTime() {
-		//每隔1s重新获取一次
+		
 		$timeout(function () {
 			$scope.date = new Date();
 			//

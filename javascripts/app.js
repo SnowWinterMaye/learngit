@@ -2,8 +2,8 @@
 var app = angular.module('app', ['ionic']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-    $stateProvider.state('/homepage', {
-        url: '/homepage',
+    $stateProvider.state('/index', {
+        url: '/index',
         templateUrl: '/view/index.html',
         controller: 'homepageCtrl'
     }).state('/lagou', {
@@ -15,7 +15,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         templateUrl: '/view/clock.html',
         controller: 'clockCtrl'
     });
-    $urlRouterProvider.otherwise('/homepage');
+    $urlRouterProvider.otherwise('/index');
 }]).run([function () {
     console.log('Hhh');
 }]);
